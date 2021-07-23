@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import {AppComponent} from "../../app.component";
 import {Asteroid} from "../../models/asteroid";
 import {InformationComponent} from "../viewport/information/information.component";
@@ -8,17 +8,19 @@ import {InformationComponent} from "../viewport/information/information.componen
   templateUrl: './asteroids.component.html',
   styleUrls: ['./asteroids.component.scss']
 })
+
 export class AsteroidsComponent implements OnInit {
-  asteroids: Asteroid[] = this.appComponent.allAsteroids
-  constructor(private appComponent: AppComponent, private infoComp: InformationComponent) {
-  }
+  asteroids: Asteroid[] = this.appComponent.allAsteroids;
+  @Output() redirect: EventEmitter<any> = new EventEmitter();
+
+  constructor(private appComponent: AppComponent, private infoComp: InformationComponent) {}
 
   ngOnInit(): any {
     this.getCountdown();
   }
 
   onClick(id:number){
-    this.infoComp.getAsteroid(id);
+    this.redirect.emit(id);
   }
 
   getCountdown(): any {

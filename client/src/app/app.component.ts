@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {AppService} from "./app.service";
 import { Asteroid} from "./models/asteroid";
 
 @Component({
@@ -8,11 +7,23 @@ import { Asteroid} from "./models/asteroid";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  dateObj = new Date();
+  month = this.dateObj.getUTCMonth() + 1; //months from 1-12
+  day = this.dateObj.getUTCDate();
+  year = this.dateObj.getUTCFullYear();
+
+  newdate = this.year + "-" + this.month + "-" + this.day;
+
+
+
+  url:string = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.newdate}&api_key=XmohfzUl7TDAmHjfPki0ZXJAwYp4VyaKqvfpWdFm`
   title = 'impact';
   tempAsteroids:any = [];
   allAsteroids:Asteroid[] = [];
+  parentData: any;
 
-  constructor(private app:AppService) {}
+  constructor() {}
 
   public async getAsteroids(url: string) {
     const data = await fetch(url);
@@ -27,7 +38,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): any {
-    this.getAsteroids(this.app.url);
+    this.getAsteroids(this.url);
+    console.log(this.url)
   }
 
 

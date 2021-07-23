@@ -1,19 +1,18 @@
-{{mainAsteroid | json}}
-
 <div class="grid grid-cols-10 w-full h-full p-3">
   <div class="col-span-10 md:col-span-5">
     <ul>
       <li>
-        <h5>Close Approach Date: <span></span> </h5>
+        <h5>Close Approach Date: <span>{{mainAsteroid.approach}}</span> </h5>
       </li>
       <li>
-        <h5>Relative Velocity: <span> km/h</span> </h5>
+        <div class="tooltip">The relative velocity is the velocity of an object or observer B in the rest frame of another object or observer A.</div>
+        <h5>Relative Velocity: <span>{{(mainAsteroid.velocity).toFixed(0)}} km/h</span> </h5>
       </li>
       <li>
-        <h5>Magnitude: <span></span> </h5>
+        <h5>Magnitude: <span>{{mainAsteroid.magnitude}} au</span> </h5>
       </li>
       <li>
-        <h5>miss distance: <span> km</span> </h5>
+        <h5>miss distance: <span>{{(mainAsteroid.missDistance).toFixed(0)}} km</span> </h5>
       </li>
 
     </ul>
@@ -21,19 +20,22 @@
   <div class="col-span-10 md:col-span-5">
     <ul>
       <li>
+        <div class="tooltip">An ID given by default by NASA</div>
         <h5>ID: <span>{{mainAsteroid.id}}</span> </h5>
       </li>
 
       <li>
-        <h5>Diameter: <span> km</span> </h5>
+        <h5>Diameter: <span>{{(mainAsteroid.averageDiameter).toFixed(4)}} km</span> </h5>
       </li>
 
       <li>
-        <h5>Potential hazardous asteroid: <span></span> </h5>
+        <div class="tooltip">A potentially hazardous asteroid (PHA) is an asteroid whose orbit comes nearer than 0.05AU (about 7.5 million km) to the Earth and whose brightness implies a size of the order of about 100m across or more. Such objects would have devastating consequences if they were to impact the Earth.</div>
+        <h5>Potential hazardous asteroid: <span>{{mainAsteroid.hazardous}}</span> </h5>
       </li>
 
       <li>
-        <h5>is sentry object: <span></span> </h5>
+        <div class="tooltip">Sentry is a highly automated collision monitoring system that continually scans the most current asteroid catalog for possibilities of future impact with Earth over the next 100 years.</div>
+        <h5>is sentry object: <span>{{mainAsteroid.sentry}}</span> </h5>
       </li>
     </ul>
   </div>

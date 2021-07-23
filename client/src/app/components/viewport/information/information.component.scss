@@ -5,19 +5,43 @@
 
   ul {
     li {
+      background-color: rgba(36, 55, 88, 0.5);
+      text-transform: capitalize;
+
       @apply
       p-3
       m-2
       rounded
       text-sm
       ;
-      background-color: rgba(36, 55, 88, 0.5);
+
 
       h5 {
         color:#b4d0ff;
         span {
           color: #00dfc0;
         }
+      }
+
+      &:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+
+      }
+
+      .tooltip {
+        text-transform:none;
+        color: #e7c4ff;
+        max-width: 32%;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+        position: absolute;
+        transform: translate(-5px, -120%);
+
+        background-color: #53267b;
+        padding:10px;
+        border-radius: 10px 10px 10px 0;
       }
     }
   }

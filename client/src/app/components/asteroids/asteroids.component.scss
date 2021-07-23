@@ -1,6 +1,7 @@
 .asteroid-container {
   font-family: 'Source Sans Pro', sans-serif;
 
+
   .header {
     h1 {
       font-family: 'Fugaz One', cursive;
@@ -12,11 +13,12 @@
     }
   }
 
+
   @apply
   text-white
   p-4
-  h-screen
   overflow-scroll
+    md:h-screen
   ;
   background-color: #14243e;
 
