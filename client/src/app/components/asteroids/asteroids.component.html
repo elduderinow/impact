@@ -1,0 +1,17 @@
+<div class="asteroid-container">
+  <div class="header pb-3 text-3xl text-center">
+    <h1>DEEPER IMPACT</h1>
+    <p>The extinction app</p>
+  </div>
+
+  <ul>
+    <li (click)="onClick(asteroid.id)" id="{{asteroid.id}}" *ngFor="let asteroid of asteroids">
+      <h3>{{asteroid.name}}</h3>
+      <p>Magnitude: {{asteroid.magnitude}} Au<br>
+        Diameter: {{asteroid.averageDiameter}} km<br>
+        countdown:{{getCountdown()}} T - {{asteroid.countdown}}
+      </p>
+    </li>
+  </ul>
+</div>
+

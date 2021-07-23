@@ -1,0 +1,24 @@
+.grid {
+  @apply
+  rounded
+  ;
+
+  ul {
+    li {
+      @apply
+      p-3
+      m-2
+      rounded
+      text-sm
+      ;
+      background-color: rgba(36, 55, 88, 0.5);
+
+      h5 {
+        color:#b4d0ff;
+        span {
+          color: #00dfc0;
+        }
+      }
+    }
+  }
+}

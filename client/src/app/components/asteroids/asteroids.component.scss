@@ -1,0 +1,53 @@
+.asteroid-container {
+  font-family: 'Source Sans Pro', sans-serif;
+
+  .header {
+    h1 {
+      font-family: 'Fugaz One', cursive;
+      color: #00dfc0;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @apply
+  text-white
+  p-4
+  h-screen
+  overflow-scroll
+  ;
+  background-color: #14243e;
+
+  ul {
+    li {
+      @apply
+      text-sm
+      p-3
+      shadow-lg
+      rounded
+      mt-3
+
+      ;
+      background-color: #243758;
+      color: #b4d0ff;
+      border-top: 1px solid #39547f;
+      transition: 0.3s;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      h3 {
+        @apply font-bold;
+        color: #006dff;
+      }
+
+      &:hover {
+        background-color: #344c76;
+        cursor:pointer;
+      }
+    }
+  }
+}

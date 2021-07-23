@@ -1,0 +1,31 @@
+.grid {
+  height: 65vh;
+}
+
+.image {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  &.asteroid {
+    width: 70%;
+
+    animation: bounce 1s infinite alternate;
+
+    @keyframes bounce {
+      from {
+        transform: translateY(-50%);
+      }
+      to {
+        transform: translateY(-40%);
+      }
+    }
+
+  }
+
+  &.earth {
+    width: 40%;
+  }
+}
