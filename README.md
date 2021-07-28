@@ -1,4 +1,4 @@
-![Image description](https://github.com/LarrySul/Parallax-Landing-Page/blob/master/src/img/Screenshot%20(285).png)
+![Image description](https://github.com/elduderinow/impact/blob/master/impact.jpg)
 
 # Impact
 
