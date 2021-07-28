@@ -1,3 +1,5 @@
+![Image description](https://github.com/LarrySul/Parallax-Landing-Page/blob/master/src/img/Screenshot%20(285).png)
+
 # Impact
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
