@@ -1,29 +1,27 @@
-![Image description](https://github.com/elduderinow/impact/blob/master/impact.jpg)
-
 # Impact
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+## Practical Information
 
-## Development server
+* Repository: `impact`
+* Demo: http://impact.yarrut.com
+* Languages & Frameworks: Angular, HTML, SCSS, JS, TYPESCRIPT, TAILWIND
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## What is "Impact"?
+Impact is a simple App made in Angular & the NASA API.
 
-## Code scaffolding
+## Purpose
+The purpose of this project is to learn to handle fetch API data in a framework & using NG Components.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## FUNCTIONALITIES
+- Fetching API data from NASA open API
+- Handle Array objects in Angular
+- Loop arrays over components
+- Responsive
+- Calculating impact time
 
-## Build
+## NOTE
+Very little time to create this app, my focus went on making it functional with some styling. 
+Yes, The Responsiveness columns could be placed better, but with such little time I went for the agile way which resulted in this outcome.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
